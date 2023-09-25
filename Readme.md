@@ -1,3 +1,6 @@
+ <div style="text-align:center;">
+        <img src="https://e0.pxfuel.com/wallpapers/139/697/desktop-wallpaper-interstellar.jpg" alt="Interestelar" style="width:100%;">
+</div>
 <h1 align="center">INTERESTELAR</h1>
 
 <p align="justify">"Interstellar" is an innovative learning platform designed to revolutionize the educational experience in the "Campusland" environment. This project aims to centralize all the available courses within the campus, providing students, teachers, and administrative staff with a comprehensive solution to access and manage their education efficiently.</p>
