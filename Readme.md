@@ -122,7 +122,7 @@
                 <td>"2:50" for example</td>
             </tr>
         </table>
-        <h5>Exmple of User's Activity Entry:</h5>
+        <h5>Exmple of Users:</h5>
 
 ```json
 {
@@ -250,9 +250,8 @@
         <td>Comments related to the video.</td>
         <td>[]</td>
     </tr>
-|
 </table>
-
+<h5>Exmple of Courses:</h5>
 
 ```json
 
