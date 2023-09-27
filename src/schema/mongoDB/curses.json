@@ -1,0 +1,136 @@
+{
+    "courseName": {
+        "type": "string",
+        "description": "Name of the course.",
+        "example": "React"
+    },
+    "instructor": {
+        "type": "string",
+        "description": "Name of the course instructor.",
+        "example": "John Smith"
+    },
+    "description": {
+        "type": "string",
+        "description": "Course description.",
+        "example": "Learn the fundamentals of React development."
+    },
+    "enrollmentStatus": {
+        "type": "boolean",
+        "description": "Course enrollment status. True if open for enrollment, false otherwise.",
+        "example": true
+    },
+    "startDate": {
+        "type": "date",
+        "description": "Course start date.",
+        "example": "2023-10-01"
+    },
+    "endDate": {
+        "type": "date",
+        "description": "Course end date.",
+        "example": "2023-12-15"
+    },
+    "studentsEnrolled": {
+        "type": "number",
+        "description": "Number of students enrolled in the course.",
+        "example": 50
+    },
+    "sections": {
+        "type": "object",
+        "description": "Course sections and their videos.",
+        "example": {
+            "1": {
+                "sectionName": "Sección 1: Introducción",
+                "videos": [
+                    {
+                        "1": {
+                            "title": "Introducción al curso",
+                            "video": "react-1-01-Introducción.mp4",
+                            "links": [],
+                            "comments": []
+                        }
+                    },
+                    {
+                        "2": {
+                            "title": "¿Cómo funcionará el curso?",
+                            "video": "react-1-02-Como_funcionara_el_curso.mp4",
+                            "links": [],
+                            "comments": []
+                        }
+                    },
+                    {
+                        "3": {
+                            "title": "¿Cómo hacer preguntas?",
+                            "video": "react-1-03-Como-hacer-preguntas.mp4",
+                            "links": [],
+                            "comments": []
+                        }
+                    },
+                    {
+                        "4": {
+                            "title": "Instalaciones necesarias y recomendadas",
+                            "video": "react-1-04-Instalaciones_necesarias_y_recomendadas.mp4",
+                            "links": [
+                                {
+                                    "title": "Instalaciones necesarias",
+                                    "link": "https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362"
+                                }
+                            ],
+                            "comments": []
+                        }
+                    }
+                ]
+            },
+            "2": {
+                "sectionName": "Sección 2: Introducción a React y conceptos generales",
+                "videos": [
+                    {
+                        "1": {
+                            "title": "Introducción a la sección",
+                            "video": "react-2-01-Introducción.mp4",
+                            "links": [],
+                            "comments": []
+                        }
+                    },
+                    {
+                        "2": {
+                            "title": "¿Qué es React?",
+                            "video": "react-2-02-Que_es_React.mp4",
+                            "links": [],
+                            "comments": []
+                        }
+                    },
+                    {
+                        "3": {
+                            "title": "Primeros pasos en React",
+                            "video": "react-2-03-Primeros_pasos_en_React.mp4",
+                            "links": [
+                                {
+                                    "title": "React-index.html Demo",
+                                    "link": "https://gist.github.com/Klerith/b0111f52ba16451d095f38d4c995605b"
+                                }
+                            ],
+                            "comments": [
+                                {
+                                    "user": "User1",
+                                    "comment": "This video is great!"
+                                },
+                                {
+                                    "user": "User2",
+                                    "comment": "I learned a lot from this."
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "4": {
+                            "title": "Introducción a Babel",
+                            "video": "react-2-04-Introduccion_a_Babel.mp4",
+                            "links": [],
+                            "comments": []
+                        }
+                    }
+                ]
+            }
+        }
+    }
+}
