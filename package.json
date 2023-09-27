@@ -4,7 +4,8 @@
   "description": "This project is about a learning platform to Campuslands",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon ./src/app.js",
+    "start": "node ./src/app.js"
   },
   "keywords": ["learning","Campuslands","platform", "discord"],
   "author": "David Pérez Numa",
