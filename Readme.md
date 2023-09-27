@@ -125,24 +125,203 @@
         <h5>Exmple of User's Activity Entry:</h5>
 
 ```json
-{
-    "date": "2023-09-26",
-    "time": "10:45:00",
-    "videos": [
         {
-            "course": "JavaScript",
-            "name": "Video 3",
-            "url": "https://example.com/video3",
-            "lastWatchedTime": "12:30"
-        },
-        {
-            "course": "Node",
-            "name": "Video 5",
-            "url": "https://example.com/video5",
-            "lastWatchedTime": "8:15"
+            "date": "2023-09-26",
+            "time": "10:45:00",
+            "videos": [
+                {
+                    "course": "JavaScript",
+                    "name": "Video 3",
+                    "url": "https://example.com/video3",
+                    "lastWatchedTime": "12:30"
+                },
+                {
+                    "course": "Node",
+                    "name": "Video 5",
+                    "url": "https://example.com/video5",
+                    "lastWatchedTime": "8:15"
+                }
+            ]
         }
-    ]
-}
 ```
+---
+    
+   <li>Curses:</li>
+   <table>
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>courseName</td>
+            <td>string</td>
+            <td>Name of the course.</td>
+            <td>"React"</td>
+        </tr>
+        <tr>
+            <td>instructor</td>
+            <td>string</td>
+            <td>Name of the course instructor.</td>
+            <td>"John Smith"</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>Course description.</td>
+            <td>"Learn the fundamentals of React development."</td>
+        </tr>
+        <tr>
+            <td>enrollmentStatus</td>
+            <td>boolean</td>
+            <td>Course enrollment status. True if open for enrollment, false otherwise.</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>startDate</td>
+            <td>date</td>
+            <td>Course start date.</td>
+            <td>"2023-10-01"</td>
+        </tr>
+        <tr>
+            <td>endDate</td>
+            <td>date</td>
+            <td>Course end date.</td>
+            <td>"2023-12-15"</td>
+        </tr>
+        <tr>
+            <td>studentsEnrolled</td>
+            <td>number</td>
+            <td>Number of students enrolled in the course.</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>sections</td>
+            <td>object</td>
+            <td>Course sections and their videos.</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>- 1</td>
+            <td>object</td>
+            <td>Section 1: Introduction</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>-- sectionName</td>
+            <td>string</td>
+            <td>Name of the section.</td>
+            <td>"Section 1: Introduction"</td>
+        </tr>
+        <tr>
+            <td>-- videos</td>
+            <td>array</td>
+            <td>Videos in the section.</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>-- 1</td>
+            <td>object</td>
+            <td>Video 1</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>--- title</td>
+            <td>string</td>
+            <td>Title of the video.</td>
+            <td>"Introduction to the Course"</td>
+        </tr>
+        <tr>
+            <td>--- video</td>
+            <td>string</td>
+            <td>Video filename.</td>
+            <td>"react-1-01-Introduction.mp4"</td>
+        </tr>
+        <tr>
+            <td>--- links</td>
+            <td>array</td>
+            <td>Links related to the video.</td>
+            <td>[]</td>
+        </tr>
+        <tr>
+            <td>-- 2</td>
+            <td>object</td>
+            <td>Video 2</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>--- title</td>
+            <td>string</td>
+            <td>Title of the video.</td>
+            <td>"How the Course Works?"</td>
+        </tr>
+        <tr>
+            <td>--- video</td>
+            <td>string</td>
+            <td>Video filename.</td>
+            <td>"react-1-02-How_the_Course_Works.mp4"</td>
+        </tr>
+        <tr>
+            <td>--- links</td>
+            <td>array</td>
+            <td>Links related to the video.</td>
+            <td>[]</td>
+        </tr>
+    </table>
+
+```json
+
+{
+    "courseName": "React",
+    "instructor": "John Smith",
+    "description": "Learn the fundamentals of React development.",
+    "enrollmentStatus": true,
+    "startDate": "2023-10-01",
+    "endDate": "2023-12-15",
+    "studentsEnrolled": 50,
+    "sections": {
+        "1": {
+            "sectionName": "Section 1: Introduction",
+            "videos": [
+                {
+                    "1": {
+                        "title": "Introduction to the Course",
+                        "video": "react-1-01-Introduction.mp4",
+                        "links": []
+                    }
+                },
+                {
+                    "2": {
+                        "title": "How the Course Works?",
+                        "video": "react-1-02-How_the_Course_Works.mp4",
+                        "links": []
+                    }
+                }
+            ]
+        },
+        "2": {
+            "sectionName": "Section 2: Introduction to React and General Concepts",
+            "videos": [
+                {
+                    "1": {
+                        "title": "Introduction to the Section",
+                        "video": "react-2-01-Introduction.mp4",
+                        "links": []
+                    }
+                },
+                {
+                    "2": {
+                        "title": "What is React?",
+                        "video": "react-2-02-What_is_React.mp4",
+                        "links": []
+                    }
+                }
+            ]
+        }
+    }
+}
+
+``````
 
 </ul>    
