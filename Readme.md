@@ -125,24 +125,24 @@
         <h5>Exmple of User's Activity Entry:</h5>
 
 ```json
+{
+    "date": "2023-09-26",
+    "time": "10:45:00",
+    "videos": [
         {
-            "date": "2023-09-26",
-            "time": "10:45:00",
-            "videos": [
-                {
-                    "course": "JavaScript",
-                    "name": "Video 3",
-                    "url": "https://example.com/video3",
-                    "lastWatchedTime": "12:30"
-                },
-                {
-                    "course": "Node",
-                    "name": "Video 5",
-                    "url": "https://example.com/video5",
-                    "lastWatchedTime": "8:15"
-                }
-            ]
+            "course": "JavaScript",
+            "name": "Video 3",
+            "url": "https://example.com/video3",
+            "lastWatchedTime": "12:30"
+        },
+        {
+            "course": "Node",
+            "name": "Video 5",
+            "url": "https://example.com/video5",
+            "lastWatchedTime": "8:15"
         }
+    ]
+}
 ```
 ---
     
