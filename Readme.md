@@ -332,5 +332,30 @@
     <li><strong>Frameworks & Drivers:</strong> Contains external frameworks and adapters.</li>
 </ul>
 <div  align="center">
-        <img src="https://cdn.discordapp.com/attachments/1088108120254980148/1156430312990060584/image.png?ex=6514f128&is=65139fa8&hm=20e77184a0f5c2c63b951da5641289ce36e6bdc5defbb49838138087b8a1c6be&" alt="Interestelar" >
+        <img src="https://cdn.discordapp.com/attachments/1088108120254980148/1156628588829868062/image.png?ex=6515a9d0&is=65145850&hm=66766d989d02d72bed2d3d38f11eb2e28c7d9471d4030755e9cb61810938bea8&" alt="Interestelar" >
 </div>
+
+---
+
+<h2 align="center">🐳Docker & docker-compose🐳</h2>
+
+<h3>Command `docker-compose build`</h3>
+<p>The `docker-compose build` command is used to build the Docker images defined in the `docker-compose.yml` file. This ensures that all images are ready for use before starting the containers.</p>
+
+<p>To use this command, navigate to the directory containing your `docker-compose.yml` file and execute:</p>
+
+```bash
+docker-compose build
+```
+
+<h3>Command `docker-compose up`</h3>
+<p>The `docker-compose up` command is used to start all containers defined in the `docker-compose.yml` file. If the images have not been built previously, this command will automatically build them before starting the containers.</p>
+
+<p>To use this command, also navigate to the directory containing your `docker-compose.yml` file and execute:</p>
+
+```bash
+docker-compose up
+```
+
+
+<p>You can also find specific information about Docker in the <a href="https://github.com/Davidpereznuma10/Interestelar/blob/Master/docker/Readme.md">README</a> file of my GitHub repository.</p>

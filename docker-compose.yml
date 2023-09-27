@@ -1,0 +1,23 @@
+version: '3.9'
+
+services:
+  NodeInterestelar:
+    container_name: interestelarapp
+    image: node
+    build: .
+    ports:
+      - 5161:3000
+    volumes:
+      - .:/usr/src/app
+       # links:
+    #   - mongo
+  # mongo:
+  #   container_name: mongodb
+  #   image: mongo
+  #   environment:
+  #     - MONGO_INITDB_ROOT_USERNAME=root  
+  #     - MONGO_INITDB_ROOT_PASSWORD=root   
+  #   command:
+  #     - "5162-27017"
+  #   volumes:
+  #     - ./mongo_data:/data/db
