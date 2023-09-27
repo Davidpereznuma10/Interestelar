@@ -145,7 +145,7 @@
 ```
 ---
     
-   <li style=" padding-bottom: 5%;">📚📚 Curses:</li>
+   <li style="padding-bottom: 5%;">📚📚 Curses:</li>
     <table align="justify">
         <tr>
             <th>Field</th>
@@ -331,6 +331,6 @@
     <li><strong>Interfaces:</strong> Define contracts and interfaces for external dependencies.</li>
     <li><strong>Frameworks & Drivers:</strong> Contains external frameworks and adapters.</li>
 </ul>
- <div style="text-align:center; padding:5%">
+ <div style="text-align:center; padding-top:5%">
         <img src="https://cdn.discordapp.com/attachments/1088108120254980148/1156430312990060584/image.png?ex=6514f128&is=65139fa8&hm=20e77184a0f5c2c63b951da5641289ce36e6bdc5defbb49838138087b8a1c6be&" alt="Interestelar" >
 </div>
