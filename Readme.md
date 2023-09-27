@@ -1,4 +1,4 @@
- <h1 align="center">INTERESTELAR</h1>
+ <h1 align="center">🌌INTERESTELAR🌌</h1>
  
  
 
@@ -38,11 +38,10 @@
 
 <h2 align="center">Schemas</h2>
 
-<h4>MongoDB<h4>
-
+<h3>MongoDB<h4>
 <ul>
-    <li>Users:</li>
-        <table>
+    <li style=" padding-bottom: 5%;">👨‍🎓👩‍🎓 Users:</li>
+        <table align="justify">
             <tr>
                 <th>Field</th>
                 <th>Type</th>
@@ -122,137 +121,136 @@
                 <td>"2:50" for example</td>
             </tr>
         </table>
-        <h5>Exmple of User's Activity Entry:</h5>
+    <h5>📝Exmple of Users:</h5>
 
 ```json
+{
+    "date": "2023-09-26",
+    "time": "10:45:00",
+    "videos": [
         {
-            "date": "2023-09-26",
-            "time": "10:45:00",
-            "videos": [
-                {
-                    "course": "JavaScript",
-                    "name": "Video 3",
-                    "url": "https://example.com/video3",
-                    "lastWatchedTime": "12:30"
-                },
-                {
-                    "course": "Node",
-                    "name": "Video 5",
-                    "url": "https://example.com/video5",
-                    "lastWatchedTime": "8:15"
-                }
-            ]
+            "course": "JavaScript",
+            "name": "Video 3",
+            "url": "https://example.com/video3",
+            "lastWatchedTime": "12:30"
+        },
+        {
+            "course": "Node",
+            "name": "Video 5",
+            "url": "https://example.com/video5",
+            "lastWatchedTime": "8:15"
         }
+    ]
+}
 ```
 ---
     
-   <li>Curses:</li>
-<table>
-    <tr>
-        <th>Field</th>
-        <th>Type</th>
-        <th>Description</th>
-        <th>Example</th>
-    </tr>
-    <tr>
-        <td>courseName</td>
-        <td>string</td>
-        <td>Name of the course.</td>
-        <td>"React"</td>
-    </tr>
-    <tr>
-        <td>instructor</td>
-        <td>string</td>
-        <td>Name of the course instructor.</td>
-        <td>"John Smith"</td>
-    </tr>
-    <tr>
-        <td>description</td>
-        <td>string</td>
-        <td>Course description.</td>
-        <td>"Learn the fundamentals of React development."</td>
-    </tr>
-    <tr>
-        <td>enrollmentStatus</td>
-        <td>boolean</td>
-        <td>Course enrollment status. True if open for enrollment, false otherwise.</td>
-        <td>true</td>
-    </tr>
-    <tr>
-        <td>startDate</td>
-        <td>date</td>
-        <td>Course start date.</td>
-        <td>"2023-10-01"</td>
-    </tr>
-    <tr>
-        <td>endDate</td>
-        <td>date</td>
-        <td>Course end date.</td>
-        <td>"2023-12-15"</td>
-    </tr>
-    <tr>
-        <td>studentsEnrolled</td>
-        <td>number</td>
-        <td>Number of students enrolled in the course.</td>
-        <td>50</td>
-    </tr>
-    <tr>
-        <td>sections</td>
-        <td>object</td>
-        <td>Course sections and their videos.</td>
-        <td>See example below</td>
-    </tr>
-    <tr>
-        <td>- 1</td>
-        <td>object</td>
-        <td>Section 1: Introduction</td>
-        <td>See example below</td>
-    </tr>
-    <tr>
-        <td>-- sectionName</td>
-        <td>string</td>
-        <td>Name of the section.</td>
-        <td>"Section 1: Introduction"</td>
-    </tr>
-    <tr>
-        <td>-- videos</td>
-        <td>array</td>
-        <td>Videos in the section.</td>
-        <td>See example below</td>
-    </tr>
-    <tr>
-        <td>-- 1</td>
-        <td>object</td>
-        <td>Video 1</td>
-        <td>See example below</td>
-    </tr>
-    <tr>
-        <td>--- title</td>
-        <td>string</td>
-        <td>Title of the video.</td>
-        <td>"Introduction to the Course"</td>
-    </tr>
-    <tr>
-        <td>--- video</td>
-        <td>string</td>
-        <td>Video filename.</td>
-        <td>"react-1-01-Introduction.mp4"</td>
-    </tr>
-    <tr>
-        <td>--- links</td>
-        <td>array</td>
-        <td>Links related to the video.</td>
-        <td>[]</td>
-    </tr>
-    <tr>
-        <td>--- comments</td>
-        <td>array</td>
-        <td>Comments related to the video.</td>
-        <td>[]</td>
-    </tr>
-|
-</table>
-
+   <li style="padding-bottom: 5%;">📚📚 Curses:</li>
+    <table align="justify">
+        <tr>
+            <th>Field</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Example</th>
+        </tr>
+        <tr>
+            <td>courseName</td>
+            <td>string</td>
+            <td>Name of the course.</td>
+            <td>"React"</td>
+        </tr>
+        <tr>
+            <td>instructor</td>
+            <td>string</td>
+            <td>Name of the course instructor.</td>
+            <td>"John Smith"</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>string</td>
+            <td>Course description.</td>
+            <td>"Learn the fundamentals of React development."</td>
+        </tr>
+        <tr>
+            <td>enrollmentStatus</td>
+            <td>boolean</td>
+            <td>Course enrollment status. True if open for enrollment, false otherwise.</td>
+            <td>true</td>
+        </tr>
+        <tr>
+            <td>startDate</td>
+            <td>date</td>
+            <td>Course start date.</td>
+            <td>"2023-10-01"</td>
+        </tr>
+        <tr>
+            <td>endDate</td>
+            <td>date</td>
+            <td>Course end date.</td>
+            <td>"2023-12-15"</td>
+        </tr>
+        <tr>
+            <td>studentsEnrolled</td>
+            <td>number</td>
+            <td>Number of students enrolled in the course.</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>sections</td>
+            <td>object</td>
+            <td>Course sections and their videos.</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>- 1</td>
+            <td>object</td>
+            <td>Section 1: Introduction</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>-- sectionName</td>
+            <td>string</td>
+            <td>Name of the section.</td>
+            <td>"Section 1: Introduction"</td>
+        </tr>
+        <tr>
+            <td>-- videos</td>
+            <td>array</td>
+            <td>Videos in the section.</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>-- 1</td>
+            <td>object</td>
+            <td>Video 1</td>
+            <td>See example below</td>
+        </tr>
+        <tr>
+            <td>--- title</td>
+            <td>string</td>
+            <td>Title of the video.</td>
+            <td>"Introduction to the Course"</td>
+        </tr>
+        <tr>
+            <td>--- video</td>
+            <td>string</td>
+            <td>Video filename.</td>
+            <td>"react-1-01-Introduction.mp4"</td>
+        </tr>
+        <tr>
+            <td>--- links</td>
+            <td>array</td>
+            <td>Links related to the video.</td>
+            <td>[]</td>
+        </tr>
+        <tr>
+            <td>--- comments</td>
+            <td>array</td>
+            <td>Comments related to the video.</td>
+            <td>[]</td>
+        </tr>
+    </table>
+    <h5>📝Exmple of Courses:</h5>
 
 ```json
 
@@ -318,4 +316,21 @@
 
 ``````
 
-</ul>    
+</ul>
+
+---
+
+<h2 align="center">🏗️Architecture🏗️</h2>
+
+<spam>
+    My project follows the Clean Architecture pattern with the following layers:
+</spam>
+<ul>
+    <li><strong>Entities:</strong> Represent domain entities and business logic.</li>
+    <li><strong>Use Cases:</strong> Define application-specific use cases and interact with entities.</li>
+    <li><strong>Interfaces:</strong> Define contracts and interfaces for external dependencies.</li>
+    <li><strong>Frameworks & Drivers:</strong> Contains external frameworks and adapters.</li>
+</ul>
+ <div style="text-align:center; padding-top:5%">
+        <img src="https://cdn.discordapp.com/attachments/1088108120254980148/1156430312990060584/image.png?ex=6514f128&is=65139fa8&hm=20e77184a0f5c2c63b951da5641289ce36e6bdc5defbb49838138087b8a1c6be&" alt="Interestelar" >
+</div>
