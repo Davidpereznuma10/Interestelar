@@ -1,0 +1,72 @@
+{
+    "courseName": "React",
+    "description": "Learn the fundamentals of React development.",
+    "studentsEnrolled": 50,
+    "sections": [
+        {
+            "sectionName": "Sección 1: Introducción",
+            "videos": [
+                {
+                    "title": "Introducción al curso",
+                    "fileType": "video",
+                    "video": "react-1-01-Introducción.mp4",
+                    "text": "",
+                    "links": [
+                        {
+                            "link-title": "Video on YouTube",
+                            "link": "https://www.youtube.com/watch?v=example"
+                        },
+                        {
+                            "link-title": "Additional resources",
+                            "link": "https://example.com/resources"
+                        }
+                    ],
+                    "comments": [
+                        {
+                            "discordUser": "User1",
+                            "comment": "This video is very informative."
+                        },
+                        {
+                            "discordUser": "User2",
+                            "comment": "I learned a lot from this, thank you!"
+                        }
+                    ]
+                },
+                {
+                    "title": "¿Cómo funcionará el curso?",
+                    "fileType": "video",
+                    "video": "react-1-02-Como_funcionara_el_curso.mp4",
+                    "text": "",
+                    "links": [],
+                    "comments": []
+                }
+            ]
+        },
+        {
+            "sectionName": "Sección 2: Introducción a React y conceptos generales",
+            "videos": [
+                {
+                    "title": "Introducción a la sección",
+                    "fileType": "video",
+                    "video": "react-2-01-Introducción.mp4",
+                    "text": "",
+                    "links": [],
+                    "comments": []
+                },
+                {
+                    "title": "Temas puntuales de la sección",
+                    "fileType": "text",
+                    "video": "",
+                    "text": "Temas puntuales de la sección\n¿Qué aprenderemos en esta sección?\n\n¿Qué es React?\n\nConceptos generales\n\nBabel\n\nJSX\n\nDaremos nuestros primeros pasos y una pequeña aplicación que nos ayudará a perderle el miedo a React rápidamente",
+                    "links": [
+                        {
+                            "link-title": "Additional resources",
+                            "link": "https://example.com/concept_resources"
+                        }
+                    ],
+                    "comments": []
+                }
+            ]
+        }
+    ]
+}
