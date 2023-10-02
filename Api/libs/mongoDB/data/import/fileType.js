@@ -8,4 +8,4 @@ function determineFileType(video) {
     }
   }
 
-  module.exports = { determineFileType }
+  export { determineFileType }
