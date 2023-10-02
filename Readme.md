@@ -145,174 +145,192 @@
 ```
 ---
     
-   <li style="padding-bottom: 5%;">📚📚 Curses:</li>
-    <table align="justify">
-        <tr>
-            <th>Field</th>
-            <th>Type</th>
-            <th>Description</th>
-            <th>Example</th>
-        </tr>
-        <tr>
-            <td>courseName</td>
-            <td>string</td>
-            <td>Name of the course.</td>
-            <td>"React"</td>
-        </tr>
-        <tr>
-            <td>instructor</td>
-            <td>string</td>
-            <td>Name of the course instructor.</td>
-            <td>"John Smith"</td>
-        </tr>
-        <tr>
-            <td>description</td>
-            <td>string</td>
-            <td>Course description.</td>
-            <td>"Learn the fundamentals of React development."</td>
-        </tr>
-        <tr>
-            <td>enrollmentStatus</td>
-            <td>boolean</td>
-            <td>Course enrollment status. True if open for enrollment, false otherwise.</td>
-            <td>true</td>
-        </tr>
-        <tr>
-            <td>startDate</td>
-            <td>date</td>
-            <td>Course start date.</td>
-            <td>"2023-10-01"</td>
-        </tr>
-        <tr>
-            <td>endDate</td>
-            <td>date</td>
-            <td>Course end date.</td>
-            <td>"2023-12-15"</td>
-        </tr>
-        <tr>
-            <td>studentsEnrolled</td>
-            <td>number</td>
-            <td>Number of students enrolled in the course.</td>
-            <td>50</td>
-        </tr>
-        <tr>
-            <td>sections</td>
-            <td>object</td>
-            <td>Course sections and their videos.</td>
-            <td>See example below</td>
-        </tr>
-        <tr>
-            <td>- 1</td>
-            <td>object</td>
-            <td>Section 1: Introduction</td>
-            <td>See example below</td>
-        </tr>
-        <tr>
-            <td>-- sectionName</td>
-            <td>string</td>
-            <td>Name of the section.</td>
-            <td>"Section 1: Introduction"</td>
-        </tr>
-        <tr>
-            <td>-- videos</td>
-            <td>array</td>
-            <td>Videos in the section.</td>
-            <td>See example below</td>
-        </tr>
-        <tr>
-            <td>-- 1</td>
-            <td>object</td>
-            <td>Video 1</td>
-            <td>See example below</td>
-        </tr>
-        <tr>
-            <td>--- title</td>
-            <td>string</td>
-            <td>Title of the video.</td>
-            <td>"Introduction to the Course"</td>
-        </tr>
-        <tr>
-            <td>--- video</td>
-            <td>string</td>
-            <td>Video filename.</td>
-            <td>"react-1-01-Introduction.mp4"</td>
-        </tr>
-        <tr>
-            <td>--- links</td>
-            <td>array</td>
-            <td>Links related to the video.</td>
-            <td>[]</td>
-        </tr>
-        <tr>
-            <td>--- comments</td>
-            <td>array</td>
-            <td>Comments related to the video.</td>
-            <td>[]</td>
-        </tr>
-    </table>
-    <h5>📝Exmple of Courses:</h5>
+<li style="padding-bottom: 5%;">📚📚 Courses:</li>
+<table align="justify">
+    <tr>
+        <th>Field</th>
+        <th>Type</th>
+        <th>Description</th>
+        <th>Example</th>
+    </tr>
+    <tr>
+        <td>courseName</td>
+        <td>string</td>
+        <td>Name of the course.</td>
+        <td>"react"</td>
+    </tr>
+    <tr>
+        <td>apiCourseName</td>
+        <td>string</td>
+        <td>Name of the course in API.</td>
+        <td>"React: De cero a experto (Hooks y MERN)"</td>
+    </tr>
+    <tr>
+        <td>description</td>
+        <td>string</td>
+        <td>Course description.</td>
+        <td>""</td>
+    </tr>
+    <tr>
+        <td>studentsEnrolled</td>
+        <td>number</td>
+        <td>Number of students enrolled in the course.</td>
+        <td>0</td>
+    </tr>
+    <tr>
+        <td>sections</td>
+        <td>array</td>
+        <td>Course sections and their videos.</td>
+        <td>See example below</td>
+    </tr>
+    <tr>
+        <td>- 1</td>
+        <td>object</td>
+        <td>Section 1: Introducción</td>
+        <td>See example below</td>
+    </tr>
+    <tr>
+        <td>-- sectionName</td>
+        <td>string</td>
+        <td>Name of the section.</td>
+        <td>"Sección 1: Introducción"</td>
+    </tr>
+    <tr>
+        <td>-- videos</td>
+        <td>array</td>
+        <td>Videos in the section.</td>
+        <td>See example below</td>
+    </tr>
+    <tr>
+        <td>-- 1</td>
+        <td>object</td>
+        <td>Video 1</td>
+        <td>See example below</td>
+    </tr>
+    <tr>
+        <td>--- title</td>
+        <td>string</td>
+        <td>Title of the video.</td>
+        <td>"Introducción al curso"</td>
+    </tr>
+    <tr>
+        <td>--- fileType</td>
+        <td>string</td>
+        <td>Type of the file (e.g., video, text).</td>
+        <td>"video"</td>
+    </tr>
+    <tr>
+        <td>--- video</td>
+        <td>string</td>
+        <td>Video filename.</td>
+        <td>"react-1-01-Introducción"</td>
+    </tr>
+    <tr>
+        <td>--- text</td>
+        <td>string</td>
+        <td>Text content (if fileType is "text").</td>
+        <td>""</td>
+    </tr>
+    <tr>
+        <td>--- links</td>
+        <td>array</td>
+        <td>Links related to the video or text.</td>
+        <td>[]</td>
+    </tr>
+    <tr>
+        <td>--- length</td>
+        <td>string or number</td>
+        <td>Length of the video or "No disponible" for text.</td>
+        <td>105166 or "No disponible"</td>
+    </tr>
+    <tr>
+        <td>--- comments</td>
+        <td>array</td>
+        <td>Comments related to the video or text.</td>
+        <td>[]</td>
+    </tr>
+</table>
+<h5>📝Example of Courses:</h5>
 
 ```json
-
 {
-    "courseName": "React",
-    "instructor": "John Smith",
-    "description": "Learn the fundamentals of React development.",
-    "enrollmentStatus": true,
-    "startDate": "2023-10-01",
-    "endDate": "2023-12-15",
-    "studentsEnrolled": 50,
-    "sections": {
-        "1": {
-            "sectionName": "Section 1: Introduction",
+    "courseName": "react",
+    "apiCourseName": "React: De cero a experto ( Hooks y MERN )",
+    "description": "",
+    "studentsEnrolled": 0,
+    "sections": [
+        {
+            "sectionName": "Sección 1: Introducción",
             "videos": [
                 {
-                    "1": {
-                        "title": "Introduction to the Course",
-                        "video": "react-1-01-Introduction.mp4",
-                        "links": []
-                    }
+                    "title": "Introducción al curso",
+                    "fileType": "video",
+                    "video": "react-1-01-Introducción",
+                    "text": "",
+                    "links": [],
+                    "length": 105166,
+                    "comments": []
                 },
                 {
-                    "2": {
-                        "title": "How the Course Works?",
-                        "video": "react-1-02-How_the_Course_Works.mp4",
-                        "links": []
-                    }
+                    "title": "¿Cómo funcionará el curso?",
+                    "fileType": "video",
+                    "video": "react-1-02-Como_funcionara_el_curso",
+                    "text": "",
+                    "links": [],
+                    "length": 211433,
+                    "comments": []
+                },
+                {
+                    "title": "¿Cómo hacer preguntas?",
+                    "fileType": "video",
+                    "video": "react-1-03-Como-hacer-preguntas",
+                    "text": "",
+                    "links": [],
+                    "length": 194366,
+                    "comments": []
+                },
+                {
+                    "title": "Instalaciones necesarias y recomendadas",
+                    "fileType": "video",
+                    "video": "react-1-04-Instalaciones_necesarias_y_recomendadas",
+                    "text": "",
+                    "links": [
+                        {
+                            "linkTitle": "Instalaciones necesarias",
+                            "link": "https://gist.github.com/Klerith/4a4abfd88a88b2d1f16efd95fea41362"
+                        }
+                    ],
+                    "length": 541966,
+                    "comments": []
                 }
             ]
         },
-        "2": {
-            "sectionName": "Section 2: Introduction to React and General Concepts",
+        {
+            "sectionName": "Sección 2: Introducción a React y conceptos generales",
             "videos": [
                 {
-                    "1": {
-                        "title": "Introduction to the Section",
-                        "video": "react-2-01-Introduction.mp4",
-                        "links": []
-                    }
+                    "title": "Introducción a la sección",
+                    "fileType": "video",
+                    "video": "react-2-01-Introducción",
+                    "text": "",
+                    "links": [],
+                    "length": 71016,
+                    "comments": []
                 },
                 {
-                    "2": {
-                        "title": "What is React?",
-                        "video": "react-2-02-What_is_React.mp4",
-                        "links": [],
-                        "comments": [
-                                {
-                                    "user": "Miguel Angel",
-                                    "comment": "This video is great!"
-                                },
-                                {
-                                    "user": "Casimiro",
-                                    "comment": "I learned a lot from this."
-                                }
-                            ]
-                    }
+                    "title": "Temas puntuales de la sección",
+                    "fileType": "text",
+                    "video": "",
+                    "text": "Temas puntuales de la sección\n¿Qué aprenderemos en esta sección?\n\n¿Qué es React?\n\nConceptos generales\n\nBabel\n\nJSX\n\nDaremos nuestros primeros pasos y una pequeña aplicación que nos ayudará a perderle el miedo a React rápidamente",
+                    "links": [],
+                    "length": "No disponible",
+                    "comments": []
                 }
             ]
         }
-    }
+    ]
 }
+
 
 ``````
 
@@ -359,3 +377,19 @@ docker-compose up
 
 
 <p>You can also find specific information about Docker in the <a href="https://github.com/Davidpereznuma10/Interestelar/blob/Master/docker/Readme.md">README</a> file of my GitHub repository.</p>
+
+<h2 align="center">mongoDB</h2>
+
+<p>Connection to MongoDB was successfully established, creating the 'Interestelar' database and the 'cursos' collection with documents for courses like:</p>
+
+<ul>
+  <li>'react'</li>
+  <li>'docker'</li>
+  <li>'git'</li>
+  <li>'nodejs'</li>
+  <li>'sql'</li>
+  <li>'javascript'</li>
+</ul>
+
+<p>To learn more about the implementation process and usage, please consult the <a href="./Api/libs/mongoDB/data/Readme.md">README</a> file.</p>
+
