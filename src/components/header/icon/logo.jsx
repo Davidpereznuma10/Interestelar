@@ -1,5 +1,5 @@
 import React from "react";
-import InteretelarLogoGif from '../../../public/logo.gif'; 
+import InteretelarLogoGif from '../../../../public/logo.gif'; 
 import './logo.css'
 
 function Logo() {
