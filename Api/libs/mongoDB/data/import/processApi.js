@@ -1,5 +1,5 @@
-const { determineFileType } = require('./fileType');
-const { MongoLib } = require('../conexion'); // Asegúrate de importar la clase MongoLib correctamente
+import { determineFileType } from './fileType.js';
+import { MongoLib } from '../conexion.js'; 
 
 async function getCourseData() {
   const courseNames = ["react", "docker", "git", "nodejs", "sql", "javascript"];
@@ -56,4 +56,4 @@ async function getCourseData() {
   }
 }
 
-module.exports = { getCourseData }
+export { getCourseData }

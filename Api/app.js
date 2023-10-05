@@ -1,8 +1,8 @@
-const express = require('express');
-const dotenv = require('dotenv');
-const { config } = require('./config/config');
-const { URI } = require('./libs/mongoDB/data/conexion');
-const { getCourseData } = require('./libs/mongoDB/data/import/processApi');
+import express from 'express';
+import dotenv from 'dotenv';
+import { config } from './config/config.js';
+import { URI } from './libs/mongoDB/data/conexion.js';
+// import { getCourseData } from './libs/mongoDB/data/import/processApi.js';
 
 dotenv.config();
 const app = express();

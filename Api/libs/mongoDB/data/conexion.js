@@ -1,5 +1,5 @@
-const { MongoClient } = require('mongodb');
-const { config } = require('../../../config/config');
+import { MongoClient } from 'mongodb';
+import { config } from '../../../config/config.js';
 
 const USER = encodeURIComponent(config.dbUser)
 const PASSWORD = encodeURIComponent(config.dbPassword);
@@ -38,4 +38,4 @@ class MongoLib {
   }
 }
 
-module.exports = { MongoLib, URI };
+export { MongoLib, URI };
