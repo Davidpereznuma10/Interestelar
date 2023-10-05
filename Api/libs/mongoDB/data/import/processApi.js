@@ -17,6 +17,7 @@ async function getCourseData() {
           courseName: courseName,
           apiCourseName: data.nameCourse,
           description: data.description || "",
+          image: '',
           studentsEnrolled: 0,
           sections: [],
         };
