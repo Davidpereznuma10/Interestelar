@@ -1,0 +1,26 @@
+
+.linkedin-icon:hover {
+    color: rgb(7, 164, 248);
+}
+.instagram-icon:hover{
+    color: rgb(7, 164, 248);
+}
+.github-icon:hover{
+    color: rgb(7, 164, 248);
+}
+.linkedin-icon{
+    width: 25px;
+    height: auto;
+}
+.instagram-icon{
+width: 25px;
+    height: auto;
+}
+.github-icon{
+    width: 25px;
+    height: auto;
+}
+.photo-me{
+    width: 80px;
+    height: auto;
+}
