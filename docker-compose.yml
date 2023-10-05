@@ -1,8 +1,8 @@
 version: '3.9'
 
 services:
-  NodeInterestelar:
-    container_name: interestelarapp
+  ExpressApp:
+    container_name: BackendEnd
     restart: always
     image: node
     build: .
@@ -11,16 +11,28 @@ services:
     volumes:
       - .:/usr/src/app
     links:
-     - mongo
-     
+      - mongo
+    command: npm run dev-backend 
+
+  ReactApp:
+    container_name: FrontEnd
+    restart: always
+    image: node
+    build: .
+    ports:
+      - 5163:5163
+    volumes:
+      - .:/usr/src/app
+    command: npm run dev-frontend  
+
   mongo:
     container_name: mongodb
     image: mongo
     environment:
-      - MONGO_INITDB_ROOT_USERNAME=root  
-      - MONGO_INITDB_ROOT_PASSWORD=root  
-    command: 
-      mongod --quiet --logpath /dev/null 
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
+    command:
+      mongod --quiet --logpath /dev/null
     ports:
       - 5162:27017
     volumes:
