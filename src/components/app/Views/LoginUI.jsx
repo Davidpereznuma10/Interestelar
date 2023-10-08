@@ -5,7 +5,7 @@ import { Footer } from "../../footer/index.jsx";
 
 function LoginUi(){
     const { 
-        event
+        event,
     } = React.useContext(Context)
 return(
     <>
