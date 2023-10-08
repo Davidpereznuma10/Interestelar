@@ -5,16 +5,12 @@ import planet from '../../public/planet.svg'
 import starts from '../../public/stars.svg'
 import satelite from '../../public/satelite.svg';
 
-function Login() {
-  const handleDiscordButtonClick = () => {
-    window.location.href = "http://127.9.63.7:5161/api/v1/login/";
-
-  };
+function Login({ event }) {
 
   return (
     <div className="login-container">
       <div className="btn">
-        <button onClick={handleDiscordButtonClick}>
+        <button onClick={event}>
           <div className="text">LOGIN</div>
 
           <img src={planet} className="planet" alt="planet" />
