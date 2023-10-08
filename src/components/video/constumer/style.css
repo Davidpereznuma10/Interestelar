@@ -11,6 +11,7 @@
 }
 
 .tab-button {
+  font-size: 24px;
   flex: 1;
   text-align: center;
   padding: 10px 0;
@@ -29,7 +30,7 @@
 .tab-content {
   display: none;
   padding: 20px;
-  background-color: #fff;
+  background-color: #444;
   border-radius: 0 0 5px 5px;
   order: 2;
   flex-basis: 100%;
@@ -45,7 +46,7 @@
 
 .tab-content a {
   text-decoration: none;
-  color: #0077cc;
+  color: azure;
   font-weight: bold;
   margin-right: 10px;
 }
@@ -53,8 +54,12 @@
 .tab-content .comment {
   margin-bottom: 5px;
   font-style: italic;
+  color: azure;
 }
-
+.username{
+  font-size: 20px;
+  color: aqua;
+}
 @media (max-width: 768px) {
   .tab-header {
     flex-direction: column;
