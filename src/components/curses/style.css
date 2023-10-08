@@ -6,7 +6,6 @@
 }
 
 .container-curses {
-  border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
   transition: box-shadow 0.3s;
