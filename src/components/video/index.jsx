@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import "./style.css";
-import { CostumerRows } from "./constumer";
+import { CustomerRows } from "./constumer/index.jsx";
 
 function Video() {
   const videoRef = useRef(null);
@@ -14,7 +14,7 @@ function Video() {
             </video>
         </div>
         <div className="video-costumer">
-            <CostumerRows/>
+            <CustomerRows/>
         </div>
     </>
   );

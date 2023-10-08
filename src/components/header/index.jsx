@@ -1,39 +1,32 @@
-/* header.jsx */
-
 import React, { useState } from "react";
 import { Logo } from "./icon/logo.jsx";
 import './style/index.css';
 
 const Header = () => {
-  const [isHovered, setIsHovered] = useState(false);
+  const [showUserName, setShowUserName] = useState(false);
 
-  const handleMouseEnter = () => {
-    setIsHovered(true);
-  };
-
-  const handleMouseLeave = () => {
-    setIsHovered(false);
+  const toggleUserName = () => {
+    setShowUserName(!showUserName);
   };
 
   return (
     <header className="header">
       <div className="container">
-        <Logo />
+        <div className="logo-container">
+          <Logo />
+        </div>
         <div
-          className="user"
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
+          className={`user ${showUserName ? 'show-name' : ''}`}
+          onClick={toggleUserName}
         >
           <div className="user-image-container">
             <img
-              src='#'
+              src='../../public/icon.svg'
               alt=""
               className="user-image"
             />
           </div>
-          <div className={`user-name ${isHovered ? 'show-name' : ''}`}>
-            <span>{isHovered ? "David Pérez" : null}</span>
-          </div>
+          <span className="user-name">{showUserName ? "David Pérez" : null}</span>
         </div>
       </div>
     </header>

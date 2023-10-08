@@ -1,21 +1,39 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom"; // Importa el componente Link
 import { Image } from "./images/index.jsx";
 import { Content } from "./content/index.jsx";
+import axios from 'axios';
 import './style.css';
 
 function Curses() {
-  // Crear un array de estados locales para cada contenedor
-  const [isHovered, setIsHovered] = useState(new Array(8).fill(false));
+  const [data, setData] = useState([]);
+  const getData = async () => {
+    try {
+      const response = await axios.get('http://127.9.63.7:5161/api/v1/courses');
+      return response.data;
+    } catch (error) {
+      console.error('Error fetching data:', error)
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    async function fetchData() {
+      const coursesData = await getData();
+      setData(coursesData);
+    }
+    fetchData();
+  }, []);
+
+  const [isHovered, setIsHovered] = useState(new Array(6).fill(false));
 
   const handleMouseEnter = (index) => {
-    // Actualizar el estado del contenedor específico en el índice 'index'
     const updatedIsHovered = [...isHovered];
     updatedIsHovered[index] = true;
     setIsHovered(updatedIsHovered);
   };
 
   const handleMouseLeave = (index) => {
-    // Actualizar el estado del contenedor específico en el índice 'index'
     const updatedIsHovered = [...isHovered];
     updatedIsHovered[index] = false;
     setIsHovered(updatedIsHovered);
@@ -23,19 +41,20 @@ function Curses() {
 
   return (
     <div className="container-wrapper">
-      {isHovered.map((hovered, index) => (
-        <div
-          key={index}
-          className={`container-curses ${hovered ? 'hovered' : ''}`}
-          onMouseEnter={() => handleMouseEnter(index)}
-          onMouseLeave={() => handleMouseLeave(index)}
-        >
-          <Image />
+        {data.map((course, index) => (
+          <Link
+            key={index} 
+            to={`/Video?course=${course.apiCourseName}&section=${course.sections[0]?.sectionName || ''}&video=${course.sections[0]?.videos[0]?.nombreDelVideo || ''}`}
+            className={`container-curses ${isHovered[course.id] ? 'hovered' : ''}`}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={() => handleMouseLeave(index)}
+          >
+          <Image src={course.image || ''} />
           <Content
-            title={'Nombre del curso'}
-            description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam ac ex nec dolor facilisis fermentum. Phasellus gravida euismod tortor, a feugiat justo pellentesque non. Fusce et tortor nec purus suscipit efficitur. Sed malesuada, libero id laoreet finibus, urna libero ultricies lorem, eu cursus augue turpis sed ex. Sed auctor, urna ut suscipit laoreet, arcu nisl congue velit, id semper justo nunc a augue. Sed in est bibendum, aliquam erat at, feugiat ex. Vivamus nec tincidunt justo, vel malesuada justo. Suspendisse fringilla ante ut purus sollicitudin, eget congue nulla hendrerit. Vivamus semper, sapien non efficitur finibus, eros felis sollicitudin urna, eu tempor justo lectus id libero.'}
+            title={course.apiCourseName || ''}
+            description={course.description || ''}
           />
-        </div>
+        </Link>
       ))}
     </div>
   );

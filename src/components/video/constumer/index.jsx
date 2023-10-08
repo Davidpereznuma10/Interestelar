@@ -1,5 +1,5 @@
-// CostumerRows.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import "./style.css"; // Importa el archivo CSS
 
 function TabContent(props) {
@@ -14,34 +14,67 @@ function TabContent(props) {
   );
 }
 
-function CostumerRows() {
-  const [activeTab, setActiveTab] = useState("Links"); // Estado para controlar la pestaña activa
+function CustomerRows() {
+  const [activeTab, setActiveTab] = useState("Links");
+  const [links, setLinks] = useState([]);
+  const [comments, setComments] = useState([]);
+  const [videos, setVideos] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      // Obtener la información de los cursos desde tu base de datos
+      const coursesResponse = await axios.get("http://127.9.63.7:5161/api/v1/courses");
+      const courses = coursesResponse.data;
+
+      // Generar las URLs para todas las secciones y nombres de video de cada curso
+      const allLinks = [];
+      const allComments = [];
+      const allVideos = [];
+
+      courses.forEach((course) => {
+        const courseName = course.apiCourseName;
+
+        course.sections.forEach((section) => {
+          const sectionName = section.sectionName;
+
+          // Generar las URLs de video para esta sección
+          section.videos.forEach((video) => {
+            const videoName = video.title;
+            const videoURL = `http://192.168.128.23:5010/cursos/play?course=${courseName}&seccion=${sectionName}&video=${videoName}`;
+
+            allLinks.push(<a href={videoURL}>{videoName}</a>);
+
+            // Obtener los comentarios y enlaces del video
+            const videoComments = video.comments.map((comment) => ({
+              userName: comment.userName,
+              comment: comment.comment,
+              videoName: videoName,
+            }));
+
+            allComments.push(...videoComments);
+            allVideos.push(<a href={videoURL}>{videoName}</a>);
+          });
+        });
+      });
+
+      setLinks(allLinks);
+      setComments(allComments);
+      setVideos(allVideos);
+    } catch (error) {
+      console.error("Error fetching data:", error);
+    }
+  };
+
+  useEffect(() => {
+    fetchData();
+  }, []);
 
   const handleTabClick = (tab) => {
     setActiveTab(tab);
   };
 
-  // Datos de ejemplo para las pestañas
-  const links = [
-    { linkTitle: "Enlace 1", link: "https://www.ejemplo.com/enlace1" },
-    { linkTitle: "Enlace 2", link: "https://www.ejemplo.com/enlace2" },
-    { linkTitle: "Enlace 3", link: "https://www.ejemplo.com/enlace3" },
-  ];
-
-  const comments = [
-    { username: "Usuario1", comment: "¡Excelente video!" },
-    { username: "Usuario2", comment: "Me gustaría aprender más sobre este tema." },
-    { username: "Usuario3", comment: "Gracias por compartir esto." },
-  ];
-
-  const videos = [
-    { title: "Video 1", fileType: "video", video: "https://www.ejemplo.com/video1", text: "Descripción del Video 1" },
-    { title: "Video 2", fileType: "video", video: "https://www.ejemplo.com/video2", text: "Descripción del Video 2" },
-    { title: "Video 3", fileType: "video", video: "https://www.ejemplo.com/video3", text: "Descripción del Video 3" },
-  ];
-
   return (
-    <div className="costumer-rows">
+    <div className="customer-rows">
       <div className="tab-header">
         <div
           className={`tab-button ${activeTab === "Links" ? "active-tab" : ""}`}
@@ -62,15 +95,15 @@ function CostumerRows() {
           Videos
         </div>
       </div>
-      <TabContent items={links.map(link => <a href={link.link}>{link.linkTitle}</a>)} active={activeTab === "Links"} />
+      <TabContent items={links} active={activeTab === "Links"} />
       <TabContent items={comments.map((comment, index) => (
         <div key={index} className="comment">
-          <span className="username">{comment.username}:</span> {comment.comment}
+          <span className="username">{comment.userName}:</span> {comment.comment} ({comment.videoName})
         </div>
       ))} active={activeTab === "Comments"} />
-      <TabContent items={videos.map(video => <a href={video.video}>{video.title}</a>)} active={activeTab === "Videos"} />
+      <TabContent items={videos} active={activeTab === "Videos"} />
     </div>
   );
 }
 
-export { CostumerRows };
+export { CustomerRows };
