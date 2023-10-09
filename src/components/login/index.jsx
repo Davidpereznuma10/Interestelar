@@ -10,7 +10,7 @@ function Login({ event }) {
   return (
     <div className="login-container">
       <div className="btn">
-        <button onClick={event}>
+        <button onClick={event}> 
           <div className="text">LOGIN</div>
 
           <img src={planet} className="planet" alt="planet" />
