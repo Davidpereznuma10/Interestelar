@@ -7,7 +7,7 @@ import { config } from './config/config.js';
 
 import { URI } from './libs/mongoDB/data/conexion.js';
 import  { getUsersData }from'./libs/mongoDB/data/import/UsersData.js'
-// import { getCourseData } from './libs/mongoDB/data/import/cursesData.js';
+import { getCourseData } from './libs/mongoDB/data/import/cursesData.js';
 import { RouterApi } from './routers/index.js';
 
 import { logErrors, errorHanlder, boomError } from './middlewares/errorHandler.js'

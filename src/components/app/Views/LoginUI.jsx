@@ -3,13 +3,19 @@ import { Context } from "../../contex/index.jsx";
 import { Login } from "../../login/index.jsx";
 import { Footer } from "../../footer/index.jsx";
 
-function LoginUi(){
-React.useContext(Context)
-return(
+function LoginUi() {
+  const { 
+    event
+   } = React.useContext(Context);
+
+  return (
     <>
-        <Login/>
-        <Footer></Footer>
+      <Login 
+        event={event} 
+      /> 
+      <Footer />
     </>
-);
+  );
 }
-export  { LoginUi }
+
+export { LoginUi };

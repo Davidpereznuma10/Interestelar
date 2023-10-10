@@ -1,32 +1,23 @@
-import React, { useState } from "react";
+import React from "react";
 import { Logo } from "./icon/logo.jsx";
 import './style/index.css';
+import { UserName } from "./users/name.jsx";
+import { UserImage } from "./users/image.jsx";
 
-const Header = () => {
-  const [showUserName, setShowUserName] = useState(false);
-
-  const toggleUserName = () => {
-    setShowUserName(!showUserName);
-  };
-
+function Header({ username, discordUserID, avatar, showUserName, toggleUserName }) {
   return (
     <header className="header">
       <div className="container">
-        <div className="logo-container">
           <Logo />
-        </div>
         <div
           className={`user ${showUserName ? 'show-name' : ''}`}
           onClick={toggleUserName}
         >
-          <div className="user-image-container">
-            <img
-              src='../../public/icon.svg'
-              alt=""
-              className="user-image"
-            />
-          </div>
-          <span className="user-name">{showUserName ? "David Pérez" : null}</span>
+        <UserImage 
+          discordUserID={discordUserID} 
+          avatar={avatar} 
+        />
+        {showUserName ? <UserName username={username} /> : null}
         </div>
       </div>
     </header>

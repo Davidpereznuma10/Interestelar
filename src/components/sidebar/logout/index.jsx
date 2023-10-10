@@ -1,11 +1,14 @@
 import React from "react";
 import { Left } from "./icon/icon";
+import './style.css'
 
-function Logout() {
+function Logout({logoutevent}) {
     return (
-        <div className="logout">
+        <button 
+            className="logout"
+            onClick={logoutevent}  >
             <Left/>
-        </div>
+        </button>
     );
 }
 

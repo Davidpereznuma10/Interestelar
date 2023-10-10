@@ -1,0 +1,73 @@
+/* Estilos para el componente de carga */
+.container-curses.loading {
+  padding: 10px;
+  text-align: center;
+  transition: box-shadow 0.3s;
+  overflow: hidden;
+  width: 400px; /* Ancho fijo para dos columnas en pantallas grandes */
+  cursor: pointer;
+  background: linear-gradient(90deg, rgba(250, 250, 250, 1), rgb(200, 199, 199));
+  background-size: 400% 400%;
+}
+
+.container-curses.loading .content {
+  display: none;
+}
+
+.container-curses.loading:hover {
+  box-shadow: 0px 0px 10px rgba(114, 212, 245, 0.3);
+}
+
+.container-curses.loading:hover .content {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .container-curses.loading {
+    width: 100%; /* Cambia a una sola columna en pantallas pequeñas */
+  }
+}
+
+.container-curses.loading.loading {
+  padding: 10px;
+  text-align: center;
+  overflow: hidden;
+  margin-bottom: 10px;
+  cursor: not-allowed; /* Cambia el cursor a "no permitido" durante la carga */
+  background: linear-gradient(90deg, rgb(177, 175, 175), rgb(23, 23, 23));
+  background-size: 400% 400%;
+}
+
+.container-curses.loading.loading .image,
+.container-curses.loading.loading .content {
+  background: linear-gradient(90deg, rgb(177, 175, 175), rgb(23, 23, 23));
+  background-size: 400% 400%;
+  animation: loadingAnimation 3s ease-in-out infinite;
+}
+
+.container-curses.loading.loading .image {
+  height: 300px;
+  width: 400px;
+}
+
+.container-curses.loading.loading .content {
+  padding: 20px;
+}
+
+.container-curses.loading.loading .title,
+.container-curses.loading.loading .description {
+  display: none;
+}
+
+/* Agrega los estilos del loadingAnimation que mencionaste anteriormente */
+@keyframes loadingAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}

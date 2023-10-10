@@ -5,9 +5,9 @@ import './style.css'
 
 function Instagram() {
   return (
-<a href="https://www.instagram.com/tu-instagram">
-    <GrInstagram className="instagram-icon" alt="Instagram" />
-</a>
+    <a href="https://www.instagram.com/tu-instagram">
+        <GrInstagram className="instagram-icon" alt="Instagram" />
+    </a>
 
   );
 }
