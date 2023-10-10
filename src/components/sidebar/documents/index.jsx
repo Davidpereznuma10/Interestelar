@@ -1,17 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-function Documents({ isDocumentationOpen, toggleDocumentation }) {
-    const [isResourcesOpen, setResourcesOpen] = useState(false);
-    const [isDocumentsOpen, setDocumentsOpen] = useState(false);
-
-    const toggleResources = () => {
-        setResourcesOpen(!isResourcesOpen);
-    };
-
-    const toggleDocuments = () => {
-        setDocumentsOpen(!isDocumentsOpen);
-    };
-
+function Documents({ isDocumentationOpen, toggleDocumentation, toggleResources,toggleDocuments, isResourcesOpen, isDocumentsOpen }) {
     return (
         <div className="content">
             <ul className={`menu-list ${isDocumentationOpen ? 'open' : ''}`}>

@@ -3,7 +3,9 @@ import { GiExitDoor } from 'react-icons/gi'
 
 function Left(){
     return (
-        <GiExitDoor className="out"/>
+        <GiExitDoor 
+            className="out"
+        />
     )
 }
 
