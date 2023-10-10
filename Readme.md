@@ -80,6 +80,8 @@ You can also use `Ctrl + C` in the terminal where `docker-compose up` is running
 
 </details>
 
+---
+
 <details>
 <summary><strong style="font-size: 30px;">Schemas</strong ></summary>
 
