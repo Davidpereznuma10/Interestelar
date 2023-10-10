@@ -13,7 +13,8 @@ function App() {
           <Route path="/" element={<Navigate to="/Login" />} />
           <Route path="/Login" element={<LoginUi />} />
           <Route path="/Home" element={<HomeUi />} />
-          <Route path="/Multimedia" element={<VideoUi />} />
+          <Route path="/Multimedia" element={<LoginUi />} />
+          <Route path="/Multimedia/:courseName" element={<VideoUi />} />
         </Routes>
       </Provider>
     </>
